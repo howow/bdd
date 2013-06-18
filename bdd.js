@@ -16,14 +16,22 @@ define(function (app) {
     that.WHEN = function () {
         var args = Array.prototype.slice.call(arguments);
 
-        args[0].call(this, args[1]);
+        if (args.length === 1) {
+            args[0].call(this);
+        } else if (args.length === 2) {
+            args[0].call(this, args[1]);
+        }
         return this;
     };
 
     that.THEN = function () {
         var args = Array.prototype.slice.call(arguments);
 
-        args[0].call(this, args[1]);
+        if (args.length === 1) {
+            args[0].call(this);
+        } else if (args.length === 2) {
+            args[0].call(this, args[1]);
+        }
     };
 
     return that;
