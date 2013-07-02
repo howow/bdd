@@ -9,7 +9,11 @@ define(function (app) {
     that.GIVEN = function () {
         var args = Array.prototype.slice.call(arguments);
 
-        this.given = args[0].call(this);
+        if (args.length === 1) {
+            this.given = args[0].call(this);
+        } else if (args.length === 2) {
+            this.given = args[0].call(this, args[1]);
+        }
         return this;
     };
 
