@@ -15,6 +15,8 @@ define(function (app) {
             this.given = args[0].call(this);
         } else if (args.length === 2) {
             this.given = args[0].call(this, args[1]);
+        } else if (args.length === 3) {
+            this.given = args[0].call(this, args[1], args[2]);
         }
         return this;
     };
@@ -33,6 +35,8 @@ define(function (app) {
             this.when = args[0].call(this);
         } else if (args.length === 2) {
             this.when = args[0].call(this, args[1]);
+        } else if (args.length === 3) {
+            this.when = args[0].call(this, args[1], args[2]);
         }
 
         return this;
@@ -45,6 +49,8 @@ define(function (app) {
             args[0].call(this);
         } else if (args.length === 2) {
             args[0].call(this, args[1]);
+        } else if (args.length === 3) {
+            args[0].call(this, args[1], args[2]);
         }
 
         return this;
@@ -53,6 +59,6 @@ define(function (app) {
     that.AND = function () {
         return this.THEN.apply(this, arguments);
     };
-
+    // Fake comment only for a new commit
     return that;
 });
