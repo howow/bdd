@@ -1,6 +1,5 @@
 {
   "name": "bdd",
-  "version": "0.0.1",
   "main": "bdd.js",
   "ignore": [
     "**/.*",
@@ -8,6 +7,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "private":true
+  ]
 }
